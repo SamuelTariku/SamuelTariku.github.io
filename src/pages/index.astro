@@ -135,6 +135,10 @@ const projects = [
 	.poster-portrait{position:relative;z-index:1;width:min(78%,340px);aspect-ratio:1}.poster-portrait img.portrait-frame{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;filter:none!important;animation:none;opacity:0}.poster-portrait img.portrait-frame-1{opacity:1}.poster-portrait.portrait-ready img.portrait-frame-1{animation:portrait-front 5s linear infinite}.poster-portrait.portrait-ready img.portrait-frame-2{animation:portrait-swap 5s linear infinite}.poster-portrait.portrait-ready img.portrait-frame-3{animation:portrait-hold 5s linear infinite}@keyframes portrait-front{0%,36%{opacity:1}36.01%,81%{opacity:0}81.01%,100%{opacity:1}}@keyframes portrait-swap{0%,36%{opacity:0}36.01%,41%{opacity:1}41.01%,76%{opacity:0}76.01%,81%{opacity:1}81.01%,100%{opacity:0}}@keyframes portrait-hold{0%,41%{opacity:0}41.01%,76%{opacity:1}76.01%,100%{opacity:0}}@media(prefers-reduced-motion:reduce){.poster-portrait .portrait-frame-2,.poster-portrait .portrait-frame-3{display:none}.poster-portrait img.portrait-frame-1{animation:none!important;opacity:1!important}}
 </style>
 
+<style>
+	.title-screen h1{animation:sami-flicker 5s steps(1,end) infinite}.title-screen h1:after{animation:sami-slice 5s steps(1,end) infinite}@keyframes sami-flicker{0%,87%,90%,93%,100%{opacity:1;transform:translateX(0)}88%{opacity:.72;transform:translateX(-2px)}89%{opacity:1;transform:translateX(1px)}91%{opacity:.86;transform:translateX(2px)}92%{opacity:1;transform:translateX(-1px)}}@keyframes sami-slice{0%,87%,93%,100%{clip-path:inset(60% 0 15%);transform:translateX(7px)}88%{clip-path:inset(18% 0 67%);transform:translateX(-9px)}89%{clip-path:inset(54% 0 23%);transform:translateX(11px)}90%{clip-path:inset(76% 0 8%);transform:translateX(-5px)}91%{clip-path:inset(35% 0 48%);transform:translateX(8px)}92%{clip-path:inset(62% 0 14%);transform:translateX(-2px)}}@media(prefers-reduced-motion:reduce){.title-screen h1,.title-screen h1:after{animation:none!important}}
+</style>
+
 <script>
 	const portrait = document.querySelector('.poster-portrait');
 	if (portrait) {
