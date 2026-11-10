@@ -44,6 +44,7 @@ const projects = [
 						<p class="hero-role">SOFTWARE ENGINEER<span class="caret">_</span></p>
 					</div>
 					<nav class="main-menu" aria-label="Explore portfolio">
+						<span class="menu-glow" aria-hidden="true"></span>
 						<p class="menu-label">SELECT DESTINATION <span>01 — 06</span></p>
 						<a href="#about"><span class="menu-index">01</span><span>PROFILE</span><b>↗</b></a>
 						<a href="#experience"><span class="menu-index">02</span><span>MISSIONS</span><b>↗</b></a>
@@ -137,6 +138,14 @@ const projects = [
 
 <style>
 	.title-screen h1{animation:sami-flicker 5s steps(1,end) infinite}.title-screen h1:after{animation:sami-slice 5s steps(1,end) infinite}@keyframes sami-flicker{0%,87%,90%,93%,100%{opacity:1;transform:translateX(0)}88%{opacity:.72;transform:translateX(-2px)}89%{opacity:1;transform:translateX(1px)}91%{opacity:.86;transform:translateX(2px)}92%{opacity:1;transform:translateX(-1px)}}@keyframes sami-slice{0%,87%,93%,100%{clip-path:inset(60% 0 15%);transform:translateX(7px)}88%{clip-path:inset(18% 0 67%);transform:translateX(-9px)}89%{clip-path:inset(54% 0 23%);transform:translateX(11px)}90%{clip-path:inset(76% 0 8%);transform:translateX(-5px)}91%{clip-path:inset(35% 0 48%);transform:translateX(8px)}92%{clip-path:inset(62% 0 14%);transform:translateX(-2px)}}@media(prefers-reduced-motion:reduce){.title-screen h1,.title-screen h1:after{animation:none!important}}
+</style>
+
+<style>
+	.main-menu{isolation:isolate}.main-menu>.menu-glow{position:absolute;z-index:0;inset:-28px;pointer-events:none;background:radial-gradient(ellipse at center,#49b9ff42 0%,#ff31581c 42%,transparent 72%);opacity:.34;transform:scale(.9);will-change:transform,opacity;animation:menu-glow-breathe 4.6s ease-in-out infinite alternate}.main-menu>*:not(.menu-glow){position:relative;z-index:1}@keyframes menu-glow-breathe{from{opacity:.2;transform:scale(.88)}to{opacity:.62;transform:scale(1.05)}}@media(prefers-reduced-motion:reduce){.main-menu>.menu-glow{animation:none!important;will-change:auto}}
+</style>
+
+<style>
+	.main-menu>.menu-glow{animation-duration:1.6s;animation-direction:normal}.signal,.status-light{animation:hud-led-blink 1.45s steps(1,end) infinite}.status-light{animation-delay:.38s}.caret{display:inline-block;animation:crt-cursor-blink .82s steps(1,end) infinite}.menu-label span{animation:readout-flicker 2.8s steps(1,end) infinite}@keyframes menu-glow-breathe{0%,100%{opacity:.22;transform:scale(.89)}45%{opacity:.46;transform:scale(1)}50%{opacity:.7;transform:scale(1.055)}56%{opacity:.52;transform:scale(1.015)}}@keyframes hud-led-blink{0%,72%,100%{opacity:1}73%,79%{opacity:.25}80%,85%{opacity:1}86%,89%{opacity:.5}}@keyframes crt-cursor-blink{0%,49%{opacity:1}50%,100%{opacity:0}}@keyframes readout-flicker{0%,88%,91%,100%{opacity:1}89%{opacity:.35}90%{opacity:.8}}@media(prefers-reduced-motion:reduce){.main-menu>.menu-glow,.signal,.status-light,.caret,.menu-label span{animation:none!important;will-change:auto}}
 </style>
 
 <script>
